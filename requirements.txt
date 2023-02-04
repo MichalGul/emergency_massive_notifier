@@ -1,2 +1,4 @@
 fastapi==0.89.1
 uvicorn
+pytest == 7.2.1
+httpx == 0.23.3
