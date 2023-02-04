@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   emn-web:
-    build: .
+    image: gulczyn/emn_image:v1
     container_name: EMN
     command: uvicorn src.main:app --host 0.0.0.0 --port 80 --reload
     ports:
