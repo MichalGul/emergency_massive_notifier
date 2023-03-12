@@ -9,3 +9,12 @@ services:
       - "8001:80"
     volumes:
       - .:/code
+  database:
+    image: mongo:latest
+    container_name: emn_mongo_db
+    ports:
+      - "27018:27017"
+    volumes:
+      - emn-mongodb-data:/data/db
+volumes:
+  emn-mongodb-data:
