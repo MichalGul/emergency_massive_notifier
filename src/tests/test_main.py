@@ -1,6 +1,8 @@
+import pytest
 
 
-def test_root(test_main):
-    response = test_main.get("/")
+@pytest.mark.asyncio
+async def test_root(client_test):
+    response = await client_test.get("/")
     assert response.status_code == 200
     assert response.json() == {"message": "Hello EMN"}

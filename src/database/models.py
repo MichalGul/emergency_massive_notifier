@@ -30,6 +30,15 @@ class User(Document): #TODO Add password login, hash, and authentication w JWT
     phone_number: str | None
     # Messages send by this user
     messages_ids: List[Message] | None
-    class Settings:
+    class Config:
         name = "users"
+        arbitrary_types_allowed = True
+        schema_extra = {
+            "example": {
+                "name": "JohnBoe",
+                "email": "johnboe@gmail.com",
+                "phone_number": "999999999",
+                "messages_ids": None
+            }
+        }
 
