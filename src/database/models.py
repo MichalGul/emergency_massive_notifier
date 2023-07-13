@@ -8,11 +8,14 @@ class UserModel(BaseModel):
     email: EmailStr
     phone_number: str | None
 
+
 class MessageModel(BaseModel):
     message_title: str
     message_text: str
     send_from_user_name: str
     send_to_user_name: str
+
+
 class Message(Document):
     message_title: str
     message_text: str

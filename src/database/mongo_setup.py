@@ -13,6 +13,5 @@ async def global_init():
     client = AsyncIOMotorClient(
         MONGODB_URL
     )
-    # client = AsyncMongoMockClient() todo use this in test configuration
     await init_beanie(database=client[MONGODB_DATABASE], document_models=[User, Message])
     return client
